@@ -1,0 +1,313 @@
+@font-face {
+  font-family: aktiv-grotesk, sans-serif;
+  src: url('font/AktivGrotesk-Bold.otf');
+}
+
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Helvetica,Arial,sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: aktiv-grotesk,sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.7px;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header {
+  background: #fff;
+  padding: 0.5rem 2rem;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+}
+
+/* NAV */
+.nav-list {
+  list-style-type: none;
+  float: left;
+}
+
+.hide-mobile-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  float: right;
+  position: relative;
+  top: 20px;
+}
+
+/*Main Content*/
+main {
+  position: relative;
+  top: 65px;
+  padding: 0 2.5rem;
+}
+
+main a {
+  text-decoration: none;
+  color: #000;
+}
+
+.top-articles h1 {
+  font-size: 2.8rem;
+  letter-spacing: -1.4px;
+}
+
+.sub-text {
+  color: #777;
+  font-size: 1.4rem;
+}
+
+.author {
+  color: #333;
+  font-weight: 700;
+  margin: 13px 0;
+  font-size: 1.3rem;
+}
+
+article:hover, .top-main-article:hover {
+  opacity: 0.65;
+}
+.top-main-article {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgb(221, 221, 221);
+}
+
+.top-main-article-img {
+  width: 100%;
+}
+
+.aside-articles {
+  width: 90%;
+  margin: 0 auto;
+  border-bottom: 4px solid rgb(221, 221, 221);
+}
+
+.aside-articles article {
+  padding: 2rem 0;
+
+}
+
+.aside-articles article, 
+.latest-section article {
+  border-bottom: 1px solid rgb(221, 221, 221);
+}
+
+.aside-articles article:last-child {
+  border: none;
+}
+
+.aside-articles .author {
+  margin: 0;
+  margin-top: 1rem;
+}
+
+.aside-articles h2 {
+  font-size: 1.8rem;
+}
+
+.latest-section article {
+  padding: 2rem 0;
+  border-top: 2px solid rgb(241, 241, 241);
+}
+.latest-section h2 {
+  font-size: 1.8rem;
+  letter-spacing: -0.6px;
+  font-weight: 700;
+  margin: 15px 0;
+}
+
+.latest-section h3 {
+  font-size: 2.2rem;
+  margin-bottom: 5.5px;
+}
+
+.latest-section img {
+  display: none;
+}
+
+.latest-article-summary {
+  display: none;
+}
+
+cite.author {
+  font-style: normal;
+  padding: 0.5rem 0;
+}
+
+time {
+  color: #777;
+  display: block;
+  padding-top: 0.5rem;
+  font-size: 1.3rem;
+}
+
+footer {
+
+}
+
+@media screen and (min-width: 550px) {
+  .top-main-article {
+    width: 60%;
+    float: left;
+    border-bottom: none;
+  }
+
+  .aside-articles {
+    float: right;
+    width: 40%;
+    padding-left: 2rem;
+    border-bottom: none;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .latest-section img {
+    display: inline-block;
+  }
+
+  .latest-section-detail {
+    float: left;
+    width: 70%;
+  }
+
+  .latest-section img {
+    float: left;
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .top-main-article {
+    width: 50%;
+    float: none;
+  }
+
+  .aside-articles {
+    width: 50%;
+    float: none;
+    margin: 0;
+    padding-left: 0;
+  }
+
+  .latest-article {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 860px) {
+  .top-main-article {
+    float: left;
+    width: 40%;
+  }
+
+  .aside-articles {
+    float: left;
+    width: 30%;
+    padding-left: 2rem;
+  }
+
+  .latest-section-detail {
+    width: 30%;
+  }
+
+  .latest-article-summary {
+    float: left;
+    display: inline-block;
+    width: 40%;
+    color: #777;
+    line-height: 1.43;
+    font-size: 1.4rem;
+    padding: 0 1rem;
+  }
+
+  .latest-article {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .hamburger-menu {
+    display: none;
+  }
+
+  .hide-mobile-nav {
+    display: block;
+  }
+
+  header {
+    width: 15%;
+    float: left;
+  }
+  main {
+    width: 85%;
+    float: left;
+    top: 0;
+    left: 15%;
+  }
+
+  .aside-articles {
+    padding-left: 3rem;
+  }
+
+  .top-articles h1 {
+    line-height: 1.1;
+  }
+
+  .nav-list a, .search-article {
+    text-decoration: none;
+    color: rgb(119, 119, 119);
+    display: inline-block;
+    font-size: 1.6rem;
+    padding: 0.8rem 0;
+  }
+
+  .search-article {
+    margin-top: 2rem;
+  }
+
+  .join-techcrunch-list > a {
+    color: #fdc006;
+    font-weight: 800;
+  }
+
+  
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
